@@ -37,40 +37,81 @@
 4) Потренироваться и переписать цикл еще двумя способами*/
 
 
+// 'use strict';
+
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// if (numberOfFilms < 10 && numberOfFilms > 0){
+//     alert("Просмотрено довольно мало фильмов");
+// } else if (numberOfFilms < 30){
+//     alert("Вы классический зритель");
+// } else if(numberOfFilms>30) {
+//     alert("Вы киноман");
+// } else alert("Произошла ошибка");
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+
+// };
+// let a, b;
+// first: for (let i = 0; i < 2; i++){
+//     a = prompt('Один из последних просмотренных фильмов?','');
+//     if (a == 0 || a.length > 50){
+//         i--;
+//         continue first;
+        
+//     } else {
+//         b = prompt('На сколько оцените его?','');
+//         personalMovieDB.movies[a] = b;
+//     }
+// }
+
+
+
+// console.log(personalMovieDB);
 'use strict';
 
+ const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+ const personalMovieDB = {
+     count: numberOfFilms,
+     movies: {},
+     actors: {},
+     genres: [],
+     privat: false
+
+ };
 
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-if (numberOfFilms < 10 && numberOfFilms > 0){
-    alert("Просмотрено довольно мало фильмов");
-} else if (numberOfFilms < 30){
-    alert("Вы классический зритель");
-} else if(numberOfFilms>30) {
-    alert("Вы киноман");
-} else alert("Произошла ошибка");
+ for (let i = 0; i < 2; i++){
+    const   a = prompt('Один из последних просмотренных фильмов?',''),
+            b = prompt('На сколько оцените его?','');
+            
+            if ( a != null && b != null && a!='' && b!= '' && a.length < 50){
+                personalMovieDB.movies[a] = b;
+                console.log('Done!');
+            } else {
+                console.log('Error');
+                i--;
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+            }
+        }
 
-};
-let a, b;
-first: for (let i = 0; i < 2; i++){
-    a = prompt('Один из последних просмотренных фильмов?','');
-    if (a == 0 || a.length > 50){
-        i--;
-        continue first;
-        
-    } else {
-        b = prompt('На сколько оцените его?','');
-        personalMovieDB.movies[a] = b;
-    }
-}
+         
+    if (numberOfFilms < 10 && numberOfFilms > 0){
+        alert("Просмотрено довольно мало фильмов");
+        } else if (numberOfFilms < 30){
+            alert("Вы классический зритель");
+            } else if(numberOfFilms>30) {
+                alert("Вы киноман");
+                } else alert("Произошла ошибка");
+            
+ 
 
+ 
 
-
-console.log(personalMovieDB);
+ console.log(personalMovieDB); 
