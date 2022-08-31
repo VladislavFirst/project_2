@@ -23,24 +23,46 @@
 
 'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// let n = 10;
+// let nextPrime;
+// for (let i = 2; i < n; i++){
+//     for (let j = 2; j< i; j++){
+//         if (i%j == 0) continue nextPrime;
+//     }
+//     alert(i);
+// }
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+let n = 10;
 
-};
+nextPrime:
+for (let i = 2; i <= n; i++) { // Для всех i...
 
-const   a = prompt('Один из последних просмотренных фильмов?',''),
-        b = prompt('На сколько оцените его?',''),
-        c = prompt('Один из последних просмотренных фильмов?',''),
-        d = prompt('На сколько оцените его?','');
+  for (let j = 2; j < i; j++) { // проверить, делится ли число..
+    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  }
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+  alert( i ); // простое число
+}
 
 
-console.log(personalMovieDB);
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+
+// };
+
+// const   a = prompt('Один из последних просмотренных фильмов?',''),
+//         b = prompt('На сколько оцените его?',''),
+//         c = prompt('Один из последних просмотренных фильмов?',''),
+//         d = prompt('На сколько оцените его?','');
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+
+// console.log(personalMovieDB);
